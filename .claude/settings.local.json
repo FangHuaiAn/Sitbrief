@@ -14,7 +14,9 @@
       "Bash(test:*)",
       "Bash(dotnet format:*)",
       "Bash(dotnet add package:*)",
-      "Bash(dotnet list:*)"
+      "Bash(dotnet list:*)",
+      "Bash(dotnet tool update:*)",
+      "Bash(dotnet ef migrations add:*)"
     ]
   }
 }
