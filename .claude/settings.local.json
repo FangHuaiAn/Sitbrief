@@ -16,7 +16,14 @@
       "Bash(dotnet add package:*)",
       "Bash(dotnet list:*)",
       "Bash(dotnet tool update:*)",
-      "Bash(dotnet ef migrations add:*)"
+      "Bash(dotnet ef migrations add:*)",
+      "Bash(timeout 10 dotnet run:*)",
+      "Bash(gtimeout 8 dotnet run:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Skill(superpowers:finishing-a-development-branch)",
+      "Bash(tree:*)",
+      "Bash(find:*)"
     ]
   }
 }
