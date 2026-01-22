@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using Sitbrief.Core.Interfaces;
 using Sitbrief.Infrastructure.Data;
 using Sitbrief.Infrastructure.Repositories;
@@ -9,6 +12,33 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configure JWT Authentication
+var jwtSecret = builder.Configuration["Authentication:JwtSecret"];
+var jwtIssuer = builder.Configuration["Authentication:JwtIssuer"];
+var jwtAudience = builder.Configuration["Authentication:JwtAudience"];
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtIssuer,
+        ValidAudience = jwtAudience,
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwtSecret!))
+    };
+});
+
+builder.Services.AddAuthorization();
 
 // Add DbContext
 builder.Services.AddDbContext<SitbriefDbContext>(options =>
@@ -56,6 +86,7 @@ if (app.Environment.IsDevelopment())
     app.UseCors("DevelopmentCors");
 }
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
