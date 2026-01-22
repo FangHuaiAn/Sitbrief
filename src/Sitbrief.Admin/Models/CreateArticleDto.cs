@@ -28,6 +28,6 @@ public class CreateArticleDto
     [Required(ErrorMessage = "發布日期為必填")]
     public DateTime PublishedDate { get; set; } = DateTime.Now;
 
-    [MaxLength(50000)]
+    [MaxLength(50000, ErrorMessage = "內容長度不能超過 50000 字元")]
     public string? Content { get; set; }
 }
