@@ -5,6 +5,7 @@ using System.Text;
 using Sitbrief.Core.Interfaces;
 using Sitbrief.Infrastructure.Data;
 using Sitbrief.Infrastructure.Repositories;
+using Sitbrief.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +48,9 @@ builder.Services.AddDbContext<SitbriefDbContext>(options =>
 // Add repositories
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 builder.Services.AddScoped<ITopicRepository, TopicRepository>();
+
+// Add AI service
+builder.Services.AddHttpClient<IAIService, ClaudeAIService>();
 
 // Add CORS for development only
 if (builder.Environment.IsDevelopment())
