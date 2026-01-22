@@ -22,6 +22,7 @@ public class TopicRepository : ITopicRepository
     public async Task<IEnumerable<Topic>> GetAllAsync()
     {
         return await _context.Topics
+            .Include(t => t.ArticleTopics)
             .OrderByDescending(t => t.LastUpdatedDate)
             .ToListAsync();
     }
