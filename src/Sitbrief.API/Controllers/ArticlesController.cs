@@ -10,13 +10,19 @@ namespace Sitbrief.API.Controllers;
 public class ArticlesController : ControllerBase
 {
     private readonly IArticleRepository _articleRepository;
+    private readonly ITopicRepository _topicRepository;
+    private readonly IAIService _aiService;
     private readonly ILogger<ArticlesController> _logger;
 
     public ArticlesController(
         IArticleRepository articleRepository,
+        ITopicRepository topicRepository,
+        IAIService aiService,
         ILogger<ArticlesController> logger)
     {
         _articleRepository = articleRepository;
+        _topicRepository = topicRepository;
+        _aiService = aiService;
         _logger = logger;
     }
 
@@ -134,6 +140,58 @@ public class ArticlesController : ControllerBase
         {
             _logger.LogError(ex, "Error deleting article {ArticleId}", id);
             return StatusCode(500, "An error occurred while deleting the article");
+        }
+    }
+
+    [HttpPost("{id}/analyze")]
+    public async Task<ActionResult<AIAnalysisResultDto>> AnalyzeArticle(int id)
+    {
+        try
+        {
+            var article = await _articleRepository.GetByIdAsync(id);
+            if (article == null)
+            {
+                return NotFound($"Article with ID {id} not found");
+            }
+
+            var topics = await _topicRepository.GetAllAsync();
+            var result = await _aiService.AnalyzeArticleAsync(article, topics);
+
+            if (!result.Success)
+            {
+                return BadRequest(new { message = result.ErrorMessage });
+            }
+
+            var dto = new AIAnalysisResultDto
+            {
+                SuggestedExistingTopics = result.SuggestedExistingTopics.Select(t => new SuggestedExistingTopicDto
+                {
+                    TopicId = t.TopicId,
+                    Confidence = t.Confidence,
+                    Reason = t.Reason
+                }).ToList(),
+                SuggestedNewTopics = result.SuggestedNewTopics.Select(t => new SuggestedNewTopicDto
+                {
+                    Title = t.Title,
+                    Description = t.Description
+                }).ToList(),
+                KeyEntities = new KeyEntitiesDto
+                {
+                    Countries = result.KeyEntities.Countries,
+                    Organizations = result.KeyEntities.Organizations,
+                    Persons = result.KeyEntities.Persons
+                },
+                GeopoliticalTags = result.GeopoliticalTags,
+                Significance = result.Significance,
+                Summary = result.Summary
+            };
+
+            return Ok(dto);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error analyzing article {ArticleId}", id);
+            return StatusCode(500, "An error occurred while analyzing the article");
         }
     }
 
