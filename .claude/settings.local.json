@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Sitbrief design document\n\nComplete design for geopolitical news aggregation platform:\n- Architecture: ASP.NET Core API, Blazor Admin, iOS App\n- Data model with AI-assisted topic clustering\n- API endpoints for public and admin access\n- Claude AI integration for article analysis\n- iOS situational awareness focused UI design\n- Development phases and implementation roadmap\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Skill(superpowers:writing-plans)",
+      "Bash(git commit:*)",
+      "Skill(superpowers:subagent-driven-development)",
+      "Bash(dotnet new:*)",
+      "Bash(dotnet sln:*)",
+      "Bash(dotnet add reference:*)",
+      "Bash(dotnet build:*)",
+      "Bash(git rm:*)",
+      "Bash(test:*)",
+      "Bash(dotnet format:*)"
+    ]
+  }
+}
