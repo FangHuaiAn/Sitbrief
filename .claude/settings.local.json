@@ -12,7 +12,9 @@
       "Bash(dotnet build:*)",
       "Bash(git rm:*)",
       "Bash(test:*)",
-      "Bash(dotnet format:*)"
+      "Bash(dotnet format:*)",
+      "Bash(dotnet add package:*)",
+      "Bash(dotnet list:*)"
     ]
   }
 }
