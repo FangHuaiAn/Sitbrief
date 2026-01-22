@@ -34,12 +34,13 @@ if (builder.Environment.IsDevelopment())
 
 var app = builder.Build();
 
-// Apply migrations automatically in development
+// Apply migrations and seed data in development
 if (app.Environment.IsDevelopment())
 {
     using var scope = app.Services.CreateScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<SitbriefDbContext>();
     dbContext.Database.Migrate();
+    await DbInitializer.SeedAsync(dbContext);
 }
 
 // Configure the HTTP request pipeline
