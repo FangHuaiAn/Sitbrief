@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Sitbrief.Core.Interfaces;
 using Sitbrief.Infrastructure.Data;
+using Sitbrief.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,10 @@ builder.Services.AddSwaggerGen();
 // Add DbContext
 builder.Services.AddDbContext<SitbriefDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add repositories
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+builder.Services.AddScoped<ITopicRepository, TopicRepository>();
 
 // Add CORS for development only
 if (builder.Environment.IsDevelopment())
