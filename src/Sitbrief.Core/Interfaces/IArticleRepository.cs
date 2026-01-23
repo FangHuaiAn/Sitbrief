@@ -10,4 +10,5 @@ public interface IArticleRepository
     Task UpdateAsync(Article article);
     Task DeleteAsync(int id);
     Task<bool> ExistsAsync(int id);
+    Task LinkTopicsAsync(int articleId, IEnumerable<int> topicIds, bool confirmed = true);
 }

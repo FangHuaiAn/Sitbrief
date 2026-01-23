@@ -195,6 +195,27 @@ public class ArticlesController : ControllerBase
         }
     }
 
+    [HttpPost("{id}/topics")]
+    public async Task<IActionResult> LinkTopics(int id, LinkTopicsDto dto)
+    {
+        try
+        {
+            var exists = await _articleRepository.ExistsAsync(id);
+            if (!exists)
+            {
+                return NotFound($"Article with ID {id} not found");
+            }
+
+            await _articleRepository.LinkTopicsAsync(id, dto.TopicIds, dto.Confirmed);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error linking topics to article {ArticleId}", id);
+            return StatusCode(500, "An error occurred while linking topics");
+        }
+    }
+
     private static ArticleDto MapToDto(Article article)
     {
         return new ArticleDto

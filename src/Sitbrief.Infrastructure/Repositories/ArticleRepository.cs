@@ -59,4 +59,26 @@ public class ArticleRepository : IArticleRepository
     {
         return await _context.Articles.AnyAsync(a => a.Id == id);
     }
+
+    public async Task LinkTopicsAsync(int articleId, IEnumerable<int> topicIds, bool confirmed = true)
+    {
+        // Remove existing links
+        var existingLinks = _context.ArticleTopics.Where(at => at.ArticleId == articleId);
+        _context.ArticleTopics.RemoveRange(existingLinks);
+
+        // Add new links
+        foreach (var topicId in topicIds)
+        {
+            _context.ArticleTopics.Add(new ArticleTopic
+            {
+                ArticleId = articleId,
+                TopicId = topicId,
+                Confidence = 1.0,
+                IsConfirmed = confirmed,
+                AddedDate = DateTime.UtcNow
+            });
+        }
+
+        await _context.SaveChangesAsync();
+    }
 }
