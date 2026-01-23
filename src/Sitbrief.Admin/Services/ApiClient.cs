@@ -120,4 +120,28 @@ public class ApiClient : IApiClient
         var response = await _httpClient.DeleteAsync($"/api/topics/{id}");
         return response.IsSuccessStatusCode;
     }
+
+    // AI Analysis
+    public async Task<AIAnalysisResultDto?> AnalyzeArticleAsync(int articleId)
+    {
+        await SetAuthHeaderAsync();
+        var response = await _httpClient.PostAsync($"/api/articles/{articleId}/analyze", null);
+        if (response.IsSuccessStatusCode)
+        {
+            return await response.Content.ReadFromJsonAsync<AIAnalysisResultDto>(_jsonOptions);
+        }
+        return null;
+    }
+
+    public async Task<bool> LinkArticleTopicsAsync(int articleId, List<int> topicIds, bool confirmed = true)
+    {
+        await SetAuthHeaderAsync();
+        var request = new LinkTopicsRequest
+        {
+            TopicIds = topicIds,
+            Confirmed = confirmed
+        };
+        var response = await _httpClient.PostAsJsonAsync($"/api/articles/{articleId}/topics", request);
+        return response.IsSuccessStatusCode;
+    }
 }

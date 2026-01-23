@@ -20,4 +20,8 @@ public interface IApiClient
     Task<TopicDto?> CreateTopicAsync(CreateTopicDto topic);
     Task<bool> UpdateTopicAsync(int id, CreateTopicDto topic);
     Task<bool> DeleteTopicAsync(int id);
+
+    // AI Analysis
+    Task<AIAnalysisResultDto?> AnalyzeArticleAsync(int articleId);
+    Task<bool> LinkArticleTopicsAsync(int articleId, List<int> topicIds, bool confirmed = true);
 }
