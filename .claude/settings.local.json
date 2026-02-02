@@ -23,7 +23,13 @@
       "Bash(python3:*)",
       "Skill(superpowers:finishing-a-development-branch)",
       "Bash(tree:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(dotnet --version:*)",
+      "Skill(superpowers:executing-plans)",
+      "Bash(dotnet run)",
+      "Bash(lsof:*)",
+      "Bash(dotnet run:*)",
+      "Bash(pkill:*)"
     ]
   }
 }
