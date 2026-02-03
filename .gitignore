@@ -834,3 +834,6 @@ xcuserdata
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,visualstudio,visualstudiocode,csharp,swift,swiftpackagemanager,rider,intellij+all
+# Sitbrief specific
+data/*.db
+output/*.json
