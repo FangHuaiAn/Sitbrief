@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Sitbrief Bookmarklet</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+        h1 { color: #333; }
+        .bookmarklet { display: inline-block; padding: 12px 24px; background: #007AFF; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px 0; }
+        .bookmarklet:hover { background: #0056b3; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+        pre { background: #f4f4f4; padding: 16px; border-radius: 8px; overflow-x: auto; white-space: pre-wrap; }
+        .steps { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .steps li { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>📰 Sitbrief 文章擷取工具</h1>
+    
+    <p>這個 Bookmarklet 可以在任何網頁上一鍵擷取文章資訊，複製到剪貼簿。</p>
+
+    <h2>安裝方式</h2>
+    <div class="steps">
+        <ol>
+            <li>將下面的按鈕<strong>拖曳到書籤列</strong></li>
+            <li>或者右鍵點擊 → 加入書籤</li>
+        </ol>
+    </div>
+
+    <!-- Bookmarklet 按鈕 -->
+    <a class="bookmarklet" href="javascript:(function(){const t=document.querySelector('meta[property=&quot;og:title&quot;]')?.content||document.querySelector('meta[name=&quot;twitter:title&quot;]')?.content||document.title;const d=document.querySelector('meta[property=&quot;og:description&quot;]')?.content||document.querySelector('meta[name=&quot;description&quot;]')?.content||'';const s=document.querySelector('meta[property=&quot;og:site_name&quot;]')?.content||location.hostname.replace('www.','');const p=document.querySelector('meta[property=&quot;article:published_time&quot;]')?.content||document.querySelector('meta[name=&quot;pubdate&quot;]')?.content||new Date().toISOString().split('T')[0];const u=location.href;const text=`標題：${t}\n來源：${s}\n日期：${p.split('T')[0]}\n網址：${u}\n\n摘要：\n${d}`;navigator.clipboard.writeText(text).then(()=>alert('✅ 已複製文章資訊！\n\n請貼到 VS Code 對話中。')).catch(()=>{prompt('複製以下內容：',text)})})();">📋 擷取文章</a>
+
+    <h2>使用方式</h2>
+    <div class="steps">
+        <ol>
+            <li>在任何新聞文章頁面，點擊書籤列上的 <strong>「📋 擷取文章」</strong></li>
+            <li>文章資訊會自動複製到剪貼簿</li>
+            <li>回到 VS Code，直接貼上給 Copilot</li>
+            <li>Copilot 會自動解析並新增文章</li>
+        </ol>
+    </div>
+
+    <h2>輸出格式範例</h2>
+    <pre>標題：Living the Ukraine War and Its Consequences
+來源：usni.org
+日期：2026-02-01
+網址：https://www.usni.org/magazines/...
+
+摘要：
+The ongoing conflict in Ukraine continues to reshape...</pre>
+
+    <h2>手動輸入格式</h2>
+    <p>如果 Bookmarklet 無法使用，也可以手動輸入：</p>
+    <pre>標題：文章標題
+來源：新聞來源
+摘要：文章摘要內容...</pre>
+    <p>網址和日期可省略，會使用預設值。</p>
+
+</body>
+</html>

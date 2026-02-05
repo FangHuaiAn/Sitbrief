@@ -1,0 +1,8 @@
+# 本地開發環境變數範例
+# 複製此檔案為 .dev.vars 並填入你的值
+
+# Access Token（用於驗證 iOS App）
+ACCESS_TOKEN=your-development-token-here
+
+# 產生隨機 token 指令：
+# openssl rand -hex 32

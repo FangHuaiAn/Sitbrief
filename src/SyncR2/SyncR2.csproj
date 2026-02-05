@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitbrief.Core\Sitbrief.Core.csproj" />
+    <ProjectReference Include="..\Sitbrief.Infrastructure\Sitbrief.Infrastructure.csproj" />
+    <ProjectReference Include="..\Sitbrief.McpServer\Sitbrief.McpServer.csproj" />
+  </ItemGroup>
+</Project>

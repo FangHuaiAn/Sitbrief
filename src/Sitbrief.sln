@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitbrief.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitbrief.McpServer", "Sitbrief.McpServer\Sitbrief.McpServer.csproj", "{6B155C99-02BE-43FD-99E5-27C9246107ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncR2", "SyncR2\SyncR2.csproj", "{B101A6CA-0850-43AF-8154-E712A494DE6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{6B155C99-02BE-43FD-99E5-27C9246107ED}.Release|x64.Build.0 = Release|Any CPU
 		{6B155C99-02BE-43FD-99E5-27C9246107ED}.Release|x86.ActiveCfg = Release|Any CPU
 		{6B155C99-02BE-43FD-99E5-27C9246107ED}.Release|x86.Build.0 = Release|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Debug|x64.Build.0 = Debug|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Release|x64.ActiveCfg = Release|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Release|x64.Build.0 = Release|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B101A6CA-0850-43AF-8154-E712A494DE6A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

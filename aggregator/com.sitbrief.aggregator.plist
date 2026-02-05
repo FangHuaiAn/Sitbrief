@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sitbrief.aggregator</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/fanghuaian/Documents/Projects/Sitbrief/aggregator/.venv/bin/python</string>
+        <string>/Users/fanghuaian/Documents/Projects/Sitbrief/aggregator/aggregator.py</string>
+    </array>
+    
+    <key>WorkingDirectory</key>
+    <string>/Users/fanghuaian/Documents/Projects/Sitbrief/aggregator</string>
+    
+    <!-- 每天早上 8:00 執行 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    
+    <!-- 標準輸出和錯誤日誌 -->
+    <key>StandardOutPath</key>
+    <string>/Users/fanghuaian/Documents/Projects/Sitbrief/aggregator/logs/aggregator.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/fanghuaian/Documents/Projects/Sitbrief/aggregator/logs/aggregator.error.log</string>
+    
+    <!-- 環境變數 -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,12 @@
+[project]
+name = "sitbrief-aggregator"
+version = "1.0.0"
+description = "智庫/媒體首頁標題聚合器"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.40.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+aggregate = "aggregator:main"

@@ -22,7 +22,8 @@ builder.Services.AddMcpServer()
     .WithTools<Sitbrief.McpServer.Tools.TopicTools>()
     .WithTools<Sitbrief.McpServer.Tools.ArticleTools>()
     .WithTools<Sitbrief.McpServer.Tools.AnalysisTools>()
-    .WithTools<Sitbrief.McpServer.Tools.ExportTools>();
+    .WithTools<Sitbrief.McpServer.Tools.ExportTools>()
+    .WithTools<Sitbrief.McpServer.Tools.CloudSyncTools>();
 
 var app = builder.Build();
 

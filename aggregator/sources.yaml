@@ -1,0 +1,22 @@
+# 來源配置
+sources:
+  # CSIS - 使用網頁抓取
+  - name: CSIS
+    type: web
+    url: https://www.csis.org
+    selectors:
+      articles: 'a[href*="/analysis/"]'
+      exclude:
+        - '/events/'
+        - '/executive-education/'
+        - '/podcasts/'
+        - 'youtube.com'
+    
+  # RAND - 使用 RSS Feed（網頁有反爬蟲）
+  - name: RAND
+    type: rss
+    feeds:
+      - https://www.rand.org/pubs/commentary.xml
+      - https://www.rand.org/pubs/research_reports.xml
+      - https://www.rand.org/pubs/perspectives.xml
+

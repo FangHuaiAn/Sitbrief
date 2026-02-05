@@ -10,9 +10,9 @@
 
 | 項目 | 決定 |
 |------|------|
-| 雲端托管方案 | Azure Static Web Apps |
+| 雲端托管方案 | Cloudflare R2 |
 | Blazor Admin | 移除 |
-| iOS App 認證 | 簡單 Token |
+| iOS App 認證 | Presigned URL |
 | 同步頻率 | 手動同步 |
 
 ---
@@ -65,17 +65,16 @@
 │  └──────────────────────────────────────────────────────┘   │
 └───────────────────────────┬─────────────────────────────────┘
                             │
-                            │ git push / az storage upload
+                            │ wrangler r2 upload
                             ▼
               ┌───────────────────────────────┐
-              │  Azure Static Web Apps (免費)  │
-              │  或 GitHub Pages (免費)        │
+              │      Cloudflare R2 (免費)      │
               │  ├── articles.json            │
               │  ├── topics.json              │
               │  └── metadata.json            │
               └───────────────┬───────────────┘
                               │
-                              │ HTTPS GET
+                              │ Presigned URL (HTTPS)
                               ▼
               ┌───────────────────────────────┐
               │          iOS App              │
@@ -92,9 +91,9 @@
 | 元件 | 原用途 | 替代方案 |
 |------|--------|----------|
 | Sitbrief.API | REST API 服務 | 靜態 JSON 檔案 |
-| Azure App Service | 託管 API | Azure Static Web Apps / GitHub Pages |
+| Azure App Service | 託管 API | Cloudflare R2 |
 | Claude API 整合 | 雲端 AI 分析 | 本地 Copilot + MCP |
-| JWT 認證 | API 保護 | 不需要（靜態檔案 + SAS Token） |
+| JWT 認證 | API 保護 | Presigned URL |
 | EF Core Migrations | 資料庫版控 | 不需要（本地 SQLite） |
 
 ## 保留的元件
@@ -117,21 +116,21 @@
 
 ## 實作階段
 
-### 階段 1：建立 MCP Server（2-3 小時）
+### 階段 1：建立 MCP Server（2-3 小時）✅ 已完成
 
 **任務清單：**
 
-- [ ] 1.1 建立 `Sitbrief.McpServer` 專案
-- [ ] 1.2 設定 MCP 協議基礎架構
-- [ ] 1.3 實作資料庫連線（使用現有 SQLite）
-- [ ] 1.4 實作 MCP Tools:
+- [x] 1.1 建立 `Sitbrief.McpServer` 專案
+- [x] 1.2 設定 MCP 協議基礎架構
+- [x] 1.3 實作資料庫連線（使用現有 SQLite）
+- [x] 1.4 實作 MCP Tools:
   - `get_topics` - 取得所有主題
   - `get_articles` - 取得文章列表
   - `create_article` - 新增文章
   - `analyze_article` - AI 分析文章（回傳分析結果供 Copilot 處理）
   - `link_article_topics` - 連結文章與主題
   - `export_json` - 匯出 JSON 檔案
-- [ ] 1.5 設定 VS Code MCP 配置
+- [x] 1.5 設定 VS Code MCP 配置
 - [ ] 1.6 測試 Copilot 整合
 
 **預期成果：**
@@ -140,25 +139,27 @@
 → Copilot 透過 MCP 查詢本地資料庫並回覆
 ```
 
-### 階段 2：JSON 匯出與雲端托管（1-2 小時）
+### 階段 2：JSON 匯出與 Cloudflare R2 托管（1-2 小時）✅ 已完成
 
 **任務清單：**
 
-- [ ] 2.1 設計 JSON 結構（articles.json, topics.json）
-- [ ] 2.2 實作 JSON 匯出功能
-- [ ] 2.3 選擇雲端托管方案：
-  - 選項 A：Azure Static Web Apps
-  - 選項 B：GitHub Pages
-  - 選項 C：Azure Blob Storage
-- [ ] 2.4 設定雲端資源
-- [ ] 2.5 實作同步指令 `@sitbrief sync`
-- [ ] 2.6 設定認證（如需要）
+- [x] 2.1 設計 JSON 結構（articles.json, topics.json）
+- [x] 2.2 實作 JSON 匯出功能
+- [x] 2.3 選擇雲端托管方案：Cloudflare R2
+- [x] 2.4 設定 Cloudflare R2：
+  - 建立 R2 bucket（名稱：sitbrief-data）
+  - 安裝 wrangler CLI
+  - 設定 API Token
+- [x] 2.5 實作 R2 上傳功能（MCP Tool: `SyncToCloud`）
+- [x] 2.6 改用公開存取（免費方案）
 
 **預期成果：**
 ```
 @sitbrief sync
-→ 產生 JSON 檔案並上傳到雲端
-→ iOS App 可透過 URL 讀取最新資料
+→ 產生 JSON 檔案
+→ 上傳到 Cloudflare R2
+→ 顯示公開 URLs
+→ iOS App 可透過公開 URL 直接讀取資料（無需認證）
 ```
 
 ### 階段 3：更新 iOS App（1 小時）
@@ -260,58 +261,50 @@
 
 | 方案 | 成本 | 設定難度 | 優點 | 缺點 |
 |------|------|---------|------|------|
-| **Azure Static Web Apps** | 免費 | 低 | GitHub 自動部署、內建 HTTPS | 需要 Azure 帳號 |
-| **GitHub Pages** | 免費 | 極低 | 完全免費、git push 即部署 | 預設公開（需 Private Repo） |
-| **Azure Blob Storage** | ~$0.01/月 | 中 | 靈活、可設定 SAS | 需手動設定 CORS |
+| **Cloudflare R2 + Worker** | $10/年 | 中 | Token 認證、專業、安全 | 需購買網域 |
+| **Cloudflare R2（公開）** | 免費 | 低 | 完全免費、設定簡單 | 無認證保護 |
+| **Azure Static Web Apps** | 免費 | 低 | GitHub 自動部署、內建 HTTPS | 無法做 Token 認證 |
 
-**建議：** 使用 **Azure Static Web Apps**（免費，已確認）。
+**決定：** 使用 **Cloudflare R2 + Worker**（提供 Token 認證，年成本僅 $10）。
 
 ---
 
 ## iOS App 認證機制
 
-使用簡單的 API Token 認證：
+使用 Cloudflare R2 的**公開存取**（免費方案）：
 
 ```
-// iOS App 請求時附帶 Header
-Authorization: Bearer <static-token>
+// iOS App 直接存取公開 URL
+https://0cfbb72c4eab7aaf66611ab26f2e9d75.r2.cloudflarestorage.com/statbrief/Brief/articles.json
 ```
 
-**Azure Static Web Apps 設定：**
+**優點：**
+- 完全免費，無額外成本
+- 無需管理 Token 或簽名
+- 實**Cloudflare Worker** 作為 API Gateway，實作 Token 認證：
 
-```json
-// staticwebapp.config.json
-{
-  "routes": [
-    {
-      "route": "/data/*",
-      "headers": {
-        "Cache-Control": "no-cache"
-      }
-    }
-  ],
-  "responseOverrides": {
-    "401": {
-      "statusCode": 401,
-      "body": "Unauthorized"
-    }
-  }
-}
+```
+// iOS App 請求
+Authorization: Bearer <access-token>
+
+// Cloudflare Worker 驗證後從 R2 讀取檔案
+https://api.yourdomain.com/api/articles
 ```
 
-**Token 驗證方式：**
-- 使用 Azure Functions（免費配額內）進行簡單驗證
-- 或直接使用 SAS-like token 在 URL 參數中
+**優點：**
+- ✅ Token 認證，安全可控
+- ✅ 可隨時更換 Token
+- ✅ Worker 完全免費（每天 10 萬次請求）
+- ✅ 無輸出流量費用
+- ✅ 專業的 API 端點
 
----
+**架構：**
+```
+iOS App → Cloudflare Worker → R2 Bucket
+         (驗證 Token)      (讀取檔案)
+```
 
-## 工作流程變化
-
-### 新增文章
-
-**舊流程：**
-1. 開啟瀏覽器 → Blazor Admin
-2. 點「新增文章」→ 填表單
+**年成本：約 $10**（僅網域費用）表單
 3. 點「AI 分析」→ 等待雲端 Claude 回應
 4. 勾選建議主題 → 儲存
 

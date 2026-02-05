@@ -1,0 +1,445 @@
+{
+  "fetchedAt": "2026-02-05T13:39:38.146147+00:00",
+  "totalCount": 87,
+  "sources": [
+    "CSIS",
+    "RAND"
+  ],
+  "headlines": [
+    {
+      "title": "Russia’s Grinding War in Ukraine",
+      "url": "https://www.csis.org/analysis/russias-grinding-war-ukraine",
+      "source": "CSIS"
+    },
+    {
+      "title": "Practical H-1B Reforms to Serve U.S. Economic Interests",
+      "url": "https://www.csis.org/analysis/practical-h-1b-reforms-serve-us-economic-interests",
+      "source": "CSIS"
+    },
+    {
+      "title": "Three Truths About the End of New START and What It Means for Strategic Competition",
+      "url": "https://www.csis.org/analysis/three-truths-about-end-new-start-and-what-it-means-strategic-competition",
+      "source": "CSIS"
+    },
+    {
+      "title": "Tech Edge: A Living Playbook for America’s Technology Long Game",
+      "url": "https://www.csis.org/analysis/tech-edge-living-playbook-americas-technology-long-game",
+      "source": "CSIS"
+    },
+    {
+      "title": "Keynote Address by Howard Lutnick, U.S. Secretary of Commerce",
+      "url": "https://www.csis.org/analysis/keynote-address-howard-lutnick-us-secretary-commerce",
+      "source": "CSIS"
+    },
+    {
+      "title": "Fireside Discussion with Jacob Helberg, Under Secretary of State for Economic Affairs, and Congressman John Moolenaar, Chairman, Select Committee on China",
+      "url": "https://www.csis.org/analysis/fireside-discussion-jacob-helberg-under-secretary-state-economic-affairs-and-congressman",
+      "source": "CSIS"
+    },
+    {
+      "title": "Fireside Chat with Doug Burgum, U.S. Secretary of the Interior",
+      "url": "https://www.csis.org/analysis/fireside-chat-doug-burgum-us-secretary-interior",
+      "source": "CSIS"
+    },
+    {
+      "title": "Why the Army Needs Deception Groups",
+      "url": "https://www.csis.org/analysis/why-army-needs-deception-groups",
+      "source": "CSIS"
+    },
+    {
+      "title": "What the Bella-1 Teaches Us About Targeting Shadow Fleets",
+      "url": "https://www.csis.org/analysis/what-bella-1-teaches-us-about-targeting-shadow-fleets",
+      "source": "CSIS"
+    },
+    {
+      "title": "Ghost Busters: Options for Breaking Russia’s Shadow Fleet",
+      "url": "https://www.csis.org/analysis/ghost-busters-options-breaking-russias-shadow-fleet",
+      "source": "CSIS"
+    },
+    {
+      "title": "What Is the Strategy in the Ukraine-Russia Peace Negotiations?",
+      "url": "https://www.csis.org/analysis/what-strategy-ukraine-russia-peace-negotiations",
+      "source": "CSIS"
+    },
+    {
+      "title": "How Civil Society Exposes the Human Rights Risks of the Digital Silk Road",
+      "url": "https://www.csis.org/analysis/how-civil-society-exposes-human-rights-risks-digital-silk-road",
+      "source": "CSIS"
+    },
+    {
+      "title": "When Faith and Geopolitics Collide",
+      "url": "https://www.csis.org/analysis/when-faith-and-geopolitics-collide",
+      "source": "CSIS"
+    },
+    {
+      "title": "The Manifest Modernization Act: Enhancing Visibility Into Forced Labor Risks in U.S. Supply Chains",
+      "url": "https://www.csis.org/analysis/manifest-modernization-act-enhancing-visibility-forced-labor-risks-us-supply-chains",
+      "source": "CSIS"
+    },
+    {
+      "title": "Taking on Cyber Scams: Ideas for Congress",
+      "url": "https://www.csis.org/analysis/taking-cyber-scams-ideas-congress",
+      "source": "CSIS"
+    },
+    {
+      "title": "Why Golden Dome for America: The Case the Administration Should Make",
+      "url": "https://www.csis.org/analysis/why-golden-dome-america-case-administration-should-make",
+      "source": "CSIS"
+    },
+    {
+      "title": "When to Use (and Not Use) “As a Service” for Government Space Requirements",
+      "url": "https://www.csis.org/analysis/when-use-and-not-use-service-government-space-requirements",
+      "source": "CSIS"
+    },
+    {
+      "title": "General B. Chance Saltzman, Chief of Space Operations, on Improving Space Capabilities",
+      "url": "https://www.csis.org/analysis/general-b-chance-saltzman-chief-space-operations-improving-space-capabilities",
+      "source": "CSIS"
+    },
+    {
+      "title": "AI and Grand Strategy: The Case for Restraint",
+      "url": "https://www.csis.org/analysis/ai-and-grand-strategy-case-restraint",
+      "source": "CSIS"
+    },
+    {
+      "title": "Lost in Definition: How Confusion over Agentic AI Risks Governance",
+      "url": "https://www.csis.org/analysis/lost-definition-how-confusion-over-agentic-ai-risks-governance",
+      "source": "CSIS"
+    },
+    {
+      "title": "Protecting Americans from Biological Threats",
+      "url": "https://www.csis.org/analysis/protecting-americans-biological-threats",
+      "source": "CSIS"
+    },
+    {
+      "title": "The Future of the WHO—and How the United States Can Shape It",
+      "url": "https://www.csis.org/analysis/future-who-and-how-united-states-can-shape-it",
+      "source": "CSIS"
+    },
+    {
+      "title": "Financing Pandemic Preparedness",
+      "url": "https://www.csis.org/analysis/financing-pandemic-preparedness",
+      "source": "CSIS"
+    },
+    {
+      "title": "The 2026 National Defense Strategy by the Numbers: Radical Changes, Moderate Changes, and Some Continuities",
+      "url": "https://www.csis.org/analysis/2026-national-defense-strategy-numbers-radical-changes-moderate-changes-and-some",
+      "source": "CSIS"
+    },
+    {
+      "title": "The Depleting Missile Defense Interceptor Inventory",
+      "url": "https://www.csis.org/analysis/depleting-missile-defense-interceptor-inventory",
+      "source": "CSIS"
+    },
+    {
+      "title": "Golden Dome for America: Assessing Chinese and Russian Reactions",
+      "url": "https://www.csis.org/analysis/golden-dome-america-assessing-chinese-and-russian-reactions",
+      "source": "CSIS"
+    },
+    {
+      "title": "Where Sovereignty Meets Statecraft: South Korea’s Fairness Act and the U.S. Alliance",
+      "url": "https://www.csis.org/analysis/where-sovereignty-meets-statecraft-south-koreas-fairness-act-and-us-alliance",
+      "source": "CSIS"
+    },
+    {
+      "title": "Tipping the Cyber Balance: How AI Benchmarks Could Make Software Safer",
+      "url": "https://www.rand.org/pubs/commentary/2026/02/tipping-the-cyber-balance-how-ai-benchmarks-could-make.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Venezuela After Maduro: Q&A with RAND Experts",
+      "url": "https://www.rand.org/pubs/commentary/2026/02/venezuela-after-maduro-qa-with-rand-experts.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Ukraine Will Be the Business Opportunity of the Decade",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/ukraine-will-be-the-business-opportunity-of-the-decade.html",
+      "source": "RAND"
+    },
+    {
+      "title": "China Could Play Spoiler in Venezuela's Debt Restructuring",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/china-could-play-spoiler-in-venezuelas-debt-restructuring.html",
+      "source": "RAND"
+    },
+    {
+      "title": "The Israel-Iran Détente Won't Last",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/the-israel-iran-detente-wont-last.html",
+      "source": "RAND"
+    },
+    {
+      "title": "It’s Time to Treat China’s Connected Energy Systems As a National Security Risk",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/its-time-to-treat-chinas-connected-energy-systems-as-a.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Protests in Iran: Q&A with RAND Experts",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/protests-in-iran-qa-with-rand-experts.html",
+      "source": "RAND"
+    },
+    {
+      "title": "What Prospects for Lasting Peace Between Armenia and Azerbaijan?",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/what-prospects-for-lasting-peace-between-armenia-and-azerbaijan.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Why Many Would Sooner Sleep Divorce Their Partner Than Their Pet",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/why-many-would-sooner-sleep-divorce-their-partner-than-their-pet.html",
+      "source": "RAND"
+    },
+    {
+      "title": "The EU Needs a Plan for the Age of Strategic Globalization",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/the-eu-needs-a-plan-for-the-age-of-strategic-globalization.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Tech Can Avert Catastrophic Fires. What’s Missing Is Coordination",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/tech-can-avert-catastrophic-fires-whats-missing-is-coordination.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Un-Retiring: How Older Workers Could Solve Rural America's Labor Crisis",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/un-retiring-how-older-workers-could-solve-rural-americas.html",
+      "source": "RAND"
+    },
+    {
+      "title": "A Knowledge Deluge Threatens Disaster Research",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/a-knowledge-deluge-threatens-disaster-research.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Small Boats and Shifting Threats: Britain Can't Keep Fighting Yesterday's Battle in the Channel",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/small-boats-and-shifting-threats-britain-cant-keep.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Harnessing the Benefits of EdTech: What Research Tells Us About Using Digital Technology to Support Pupils",
+      "url": "https://www.rand.org/pubs/commentary/2026/01/harnessing-the-benefits-of-edtech-what-research-tells.html",
+      "source": "RAND"
+    },
+    {
+      "title": "In Ukraine, Is the U.S. Promising Too Much?",
+      "url": "https://www.rand.org/pubs/commentary/2025/12/in-ukraine-is-the-us-promising-too-much.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Making Highways Less High",
+      "url": "https://www.rand.org/pubs/commentary/2025/12/making-highways-less-high.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Are AI Companies Actually Ready to Play God?",
+      "url": "https://www.rand.org/pubs/commentary/2025/12/are-ai-companies-actually-ready-to-play-god.html",
+      "source": "RAND"
+    },
+    {
+      "title": "When Government Steps Back, Preparedness Must Step Up",
+      "url": "https://www.rand.org/pubs/commentary/2025/12/when-government-steps-back-preparedness-must-step-up.html",
+      "source": "RAND"
+    },
+    {
+      "title": "A Real Negotiation Process",
+      "url": "https://www.rand.org/pubs/commentary/2025/12/a-real-negotiation-process.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Bridging the Digital to Physical Divide",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4591-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Analysis of West Virginia’s State School Aid Funding Formula",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4161-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Bridging innovation: Defence-civilian synergies for a resilient European future",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4328-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Mass Shootings in the United States",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4360-3.html",
+      "source": "RAND"
+    },
+    {
+      "title": "The Science of Gun Policy",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4360-2.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Data Insights from the RAND Survey Panels",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4711-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Exploring Duality in Space",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4003-2.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Bankruptcy and Mass Torts After Harrington v. Purdue",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3790-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Employers as Partners in the Success of Working Adult Learners",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3681-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "How Artificial Intelligence Could Reshape Four Essential Competitions in Future Warfare",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4316-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Practical Guidance for Ensuring Peaceful Protests",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4218-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Improving Protest Policing",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4218-2.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Evaluation of Texas's Student Success Acceleration Program 2.0",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4445-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Digitale weerbaarheid van Nederlandse organisaties",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3700-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Enabling NATO Digital Capabilities",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3831-5.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Enabling NATO Digital Capabilities",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3831-7.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Small State, Digital Giant",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3831-4.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Poland's Digital Defence Landscape",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3831-6.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Poisoning Prevention, Treatment, and Detection as Public Health Investments",
+      "url": "https://www.rand.org/pubs/research_reports/RRA3829-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "U.S. Psychedelic Use and Microdosing in 2025",
+      "url": "https://www.rand.org/pubs/research_reports/RRA4334-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Governing the Unknown",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4610-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Promising Practices for Building Stackable Credential Infrastructure",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4555-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Justice for the accused",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4491-2.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Old priorities, new contexts",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4756-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Countering Russia-style autocracy in Georgia",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4721-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "A New Age of Nations",
+      "url": "https://www.rand.org/pubs/perspectives/PEA3691-14.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Scaling Pandemic Preparedness and Response Cost Estimates for Disease Transmission Modes",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4643-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "A Networked Leapfrog Strategy to Recapture Technology Leadership",
+      "url": "https://www.rand.org/pubs/perspectives/PEA3365-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Contemporary Foundation AI Models Increase Biological Weapons Risk",
+      "url": "https://www.rand.org/pubs/perspectives/PEA3853-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Accelerating Large-Scale Grid Infrastructure Projects to Win the AI Race",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4501-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Student Veterans and the 90-10 Rule",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4405-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "The Dynamics Behind Artificial Intelligence's Impact on Productivity Growth",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4392-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Building a U.S. National Strategy for the Artificial Intelligence Era",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4297-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Evaluating Select Global Technical Options for Countering a Rogue AI",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4361-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "The Economic Legacy of Magna Carta",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4491-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "What Predicts Disconnection Among American Youth?",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4207-2.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Rebalancing the Information Ecosystem and Renewing Shared Societal Commitments for Information Use",
+      "url": "https://www.rand.org/pubs/perspectives/PEA112-4.html",
+      "source": "RAND"
+    },
+    {
+      "title": "The Republic of Korea Is a Key Partner for the United States in Artificial Intelligence Competition with China",
+      "url": "https://www.rand.org/pubs/perspectives/PEA3691-15.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Insights from the Development and Play of Tsunami",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4240-1.html",
+      "source": "RAND"
+    },
+    {
+      "title": "Pivots and Pathways on the Road to Artificial General Intelligence Futures",
+      "url": "https://www.rand.org/pubs/perspectives/PEA4178-1.html",
+      "source": "RAND"
+    }
+  ]
+}

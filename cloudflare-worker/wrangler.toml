@@ -1,0 +1,28 @@
+name = "sitbrief-api-gateway"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# R2 Bucket 綁定
+[[r2_buckets]]
+binding = "SITBRIEF_BUCKET"
+bucket_name = "statbrief"
+
+# 環境變數（開發環境）
+[vars]
+# ACCESS_TOKEN 在部署時透過 secret 設定
+# 不要把真實 token 寫在這裡！
+
+# 生產環境設定
+[env.production]
+name = "sitbrief-api-gateway"
+routes = [
+  { pattern = "api.strataperture.net/*", zone_name = "strataperture.net" }
+]
+
+[env.production.vars]
+# ACCESS_TOKEN 透過 wrangler secret 設定
+
+# R2 Bucket 綁定（生產環境）
+[[env.production.r2_buckets]]
+binding = "SITBRIEF_BUCKET"
+bucket_name = "statbrief"

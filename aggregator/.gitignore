@@ -1,0 +1,6 @@
+# Sitbrief Aggregator
+# 聚合多個智庫/媒體的首頁標題
+
+headlines/
+sources.yaml      # 來源配置
+output/           # 聚合結果
